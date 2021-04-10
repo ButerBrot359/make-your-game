@@ -1,0 +1,652 @@
+body {
+    margin: 0;
+    background-color: black;
+    opacity: 1;
+    /* position: relative; */
+}
+.main-menu {
+    margin: 0;
+    background-image: url(img/history/mainMenu.png);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#grass {
+    z-index: 999;
+    position:absolute;
+    bottom: 0px;
+    height: 600px;
+    width: 100%;
+    background: url('img/grass2.png') repeat-x;
+
+
+}
+.intro_menu {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-image: url(img/history/night.jpg);
+    background-size: 100%;
+}
+.start-menu {
+    position: relative;
+    z-index: 999;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 35vw;
+    height: 30vh;
+    background-color: rgba(71, 67, 67, 0.5);
+    border-radius: 20px;
+    border-width: 30px;
+    border-style: groove;
+    border-color: rgb(78, 146, 78) rgb(112, 112, 53);
+}
+.start-button {
+    width: 40%;
+    height: 30%;
+    font-size: 30px;
+    border-radius: 15px;
+    border-width: 7px;
+    
+}
+.nav-buttons {
+    width: 10vw;
+    height: 10vh;
+    background-color: rgba(71, 67, 67, 0.5);
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+}
+#intro-scene {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.story-tell {
+    color: white;
+    font-size: 5vh;
+    margin: 10px;
+}
+#skip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#next-slide {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.enter-name {
+    width: 40%;
+    height: 30%;
+    font-size: 30px;
+    border-radius: 15px;
+    border-width: 7px;
+}
+
+.score-board, .new-game {
+    border-color: gray gray;
+}
+.marked {
+    border-color: yellow yellow;
+}
+#first_speaker {
+    position: absolute;
+    bottom: 0;
+    left: 15vw;
+}
+#second_speaker {
+    position: absolute;
+    bottom: 0;
+    right: 15vw;
+}
+.speaker_image {
+    height: 40vh;
+}
+#dialogue {
+    width: 40vw;
+    height: 20vh;
+    position: absolute;
+    bottom: 5vh;
+    left: 27.5vw;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: greenyellow;
+    background-color: rgba(255,255,255,0.8);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+    
+}
+#speaker-text {
+    font-size: 30px;
+    
+}
+#speaker-name {
+    position: absolute;
+    height: 5vh;
+    width: 8vw;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: greenyellow;
+    background-color: white;
+    left: 0;
+    top: -5.5vh;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0,0,0, .8);
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    
+}
+#map {
+    margin: 0;
+    position: relative;
+    /* background-image: url(img/first_bg.jpg); */
+    background-size: 100%;
+    min-height: 80vh;
+    z-index: -1;
+}
+.fox {
+    position: absolute;
+    transform: scale(-1,1);
+    left: -150px;
+    z-index: -1;
+    bottom: -50px;
+    height: 133px;
+    width: 155px;
+    size: 100px;
+    background: url('img/fox3.png') 0px 0px;
+    size: 100px;
+    transition:  right 1s;
+    transition-timing-function: linear;
+    background-repeat: no-repeat;
+    animation: play1 2.5s steps(2) infinite;
+    /* overflow: visible; */
+}
+@keyframes play1 {
+    100% {
+        background-position: -311px;
+    }
+}
+.duck {
+    position: absolute;
+    top: -150px;
+    height: 157px;
+    width: 141px;
+    background: url('img/duck.png')
+      0px 0px;
+    size: 100px;
+    transition: top 3s, left 3s;
+    transition-timing-function: linear;
+    background-repeat: no-repeat;
+    animation: play 0.9s steps(2) infinite;
+    /* z-index: ; */
+}
+@keyframes play {
+    100% {
+        background-position: -282px;
+    }
+}
+.dead {
+    position: absolute;
+    min-height: 115px;
+    min-width: 135px;
+    background: url('img/dead.png');
+    transition: top 1s, left 1s;
+    transition-timing-function: linear;
+    /* z-index: -1; */
+
+
+}
+#bottom-menu {
+    margin: 0;
+    min-height: 20vh;
+    background-color: black;
+    z-index: 999;
+
+}
+#target {
+    max-height: 70px;
+    max-width: 70px;
+    min-height: 70px;
+    min-width: 70px;
+    z-index: 999;
+}
+#timer {
+    width: 7vw;
+    height: 7vh;
+    /* background-color: white; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    border-width: 3px;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.time_score {
+    width: 7vw;
+    height: 5vh;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    
+}
+#goose {
+    /* background: yellow; */
+}
+#duck_score_image, #fox_score_image {
+    height: 90%;
+}
+#duck_score_num, #fox_score_num {
+    font-size: 3vh;
+}
+#wolfs {
+    top:5vh;
+    /* background-color: gray; */
+}
+#bottom-menu {
+    display: flex;
+    justify-content: center;
+}
+.ammo {
+    width: 50vw;
+    background-color: white;
+    border-style: ridge;
+    border-color: rgb(179, 179, 27);
+    border-width: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.gun-property,.friend {
+    width: 25vw;
+    background-color: rgb(168, 165, 165);
+    border-style: outset;
+    border-color: rgb(140, 175, 70);
+    border-width: 20px;
+}
+.used_bullet{
+    filter: alpha(Opacity=25);
+    opacity: 0.25; 
+    width: 1.5vw;
+}
+.gun-property {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2vh;
+}
+.game_gun_image {
+    height: 10vh;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+.game_gun_property {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-size: 2.5vh;
+    padding-left: 2vw;
+}
+.all_bullets_image {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    max-width: 45vw;
+}
+.all_bullets_image li img{
+    height: 4vh;
+}
+.game_bullet {
+    width: 1.5vw;
+}
+
+.self_hunger {
+    font-size: 3vh;
+}
+
+.friend {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.friend_photo {
+    min-height: 30%;
+    max-width: 30%;
+    max-height: 90%;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    
+}
+.friend-desk {
+    width: 90%;
+    height: 90%;
+    display: flex;
+}
+.friend-proerty {
+    list-style: none;
+    margin: 0;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 25px
+    
+    /* align-items: stretch; */
+
+}
+.get-duck {
+    display: flex;
+    align-items: center;
+}
+#get-duck_row {
+    background-color: white;
+    width: 70%;
+    height: 25px;
+    position: relative;
+}
+#get-duck_move {
+    position: absolute;
+    left: 0;
+    height: 25px;
+    background-color: red;
+    width: 0px;
+}
+
+.press {
+    margin-right: 5px;
+    height: 25px;
+    font-size: large;
+}
+
+.choose_map, .score_map {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 25vw;
+}
+.choose_menu, .confirm_manage_menu , .choose_menu_score {
+    position: relative;
+    background-color: rgb(151, 147, 147);
+    height: 15%;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 15px;
+    display: flex;
+    border-color: black;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* color: white */
+}
+.choose_menu_score {
+    
+    height: 70%;
+    font-size: 3.5vh;
+}
+.confirm_manage_menu {
+    height: 10%;
+}
+.choose_mark {
+    border-color: gold
+}
+.choose_block_name {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    height: 25%;
+    width: 25%;
+    
+}
+#choose_weapon_image {
+    height: 50%;
+    border-width: 2px;
+    border-radius: 15px;
+    border-style: solid;
+}
+#choose_weapon_image_aim {
+    height: 50%;
+}
+.choose_partner_image {
+    height: 90%;
+    border-width: 2px;
+    border-radius: 15px;
+    border-style: solid;
+}
+.choose_block_title {
+    font-size: 5vh;
+}
+.choose_block_benefit {
+    font-size: 3vh;
+}
+.arrow_switch {
+    height: 40%;
+}
+.arrow_right {
+    transform: scale(-1, 1)
+}
+#choose_submit, #choose_manage_submit {
+    font-size: 3.5vh;
+    color: gold;
+}
+.dead_duck_image {
+    height: 90%;
+}
+.manage_tool {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3vh;
+}
+.explain_manage_menu {
+    position: absolute;
+    width: 20vw;
+    background-color: rgb(161, 161, 118);
+    height: 200%;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 15px;
+    display: flex;
+    border-color: black;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.left_manage_explain {
+    
+    
+    left: -21vw;
+    
+}
+.right_manage_explain {
+    right: -21vw;
+}
+.choose_menu_score {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.choose_manage_mark {
+    border-color: gold
+}
+/* #score_ds_final, #score_dg_final, #score_fs_final, #score_dl_final, #score_bs_final, #score_all_final {
+    border: gold;
+    padding: 5px 10px; 
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+} */
+#get_loot {
+    width: 50%;
+}
+#loot_root {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 50%; */
+}
+#gun_loot_img {
+    height: 90%;
+}
+#gun_loot {
+    height: 5vh;
+}
+/* #gun_loot_margin {
+    margin-left: 10px;
+} */
+
+#game-pause {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+.pause-button {
+    width: 40%;
+    height: 30%;
+    font-size: 30px;
+    border-radius: 15px;
+    border-width: 7px;
+}
+.pause-continue, .pause-restart {
+    border-color: gray gray;
+}
+
+#game-pause-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 35vw;
+    height: 30vh;
+    background-color: rgba(71, 67, 67, 0.5);
+    border-radius: 20px;
+    border-width: 30px;
+    border-style: groove;
+    border-color: rgb(78, 146, 78) rgb(112, 112, 53);
+}
+.marked-pause {
+    border-color: yellow yellow;
+}
+
+#tutorialMap {
+    min-width: 99vw;
+    min-height: 99vh;
+    /* margin: 0 */
+}
+#tutorialImg {
+    height: 100%;
+    width: 100%;
+}
+#next-slide-tutorial {
+    position: absolute;
+    bottom: 45vh;
+    right: 0;
+    background-color:rgba(31, 30, 30, 0.9);
+}
+#endGameMap {
+    margin: 0;
+    background-image: url(img/history/win.jpeg);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+}
+#endText {
+    width: 40vw;
+    height: 20vh;
+    position: absolute;
+    bottom: 5vh;
+    left: 27.5vw;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    /* border-color: greenyellow; */
+    background-color: rgba(255,255,255,0.8);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vh;
+    padding: 0 20px;
+    z-index: 999;
+}
+.final_score_menu {
+    border-color: gold;
+    /* color: black; */
+}
+#back_to_mm {
+    font-size: 3.5vh;
+    color: black;
+}
