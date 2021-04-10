@@ -501,6 +501,9 @@ class FinalScore {
         this.fs = fox_shot
         this.bs = bullet_safe
     }
+    setDefault() {
+        
+    }
 };
 
 class CampSelfCondition {
@@ -827,8 +830,9 @@ function endSession(x) {
     dead_duck_arr = []
     isFoxCreated = false;
     num_of_text_intro = 0
-    // isPaused = false
+    isPaused = false
     // pause()
+    isGameEnd = false
     duckOnMap = 0
     foxShot = 0
     duckStolen = 0
@@ -855,7 +859,8 @@ function getTimeInGame(sec) {
     var formatted = hours + ':' + minutes + ':' + seconds;
 
     return formatted
-}
+};
+
 function generateFinalScoreMap() {
     document.body.innerHTML = finalScoreGameMap
     document.getElementById("playerName").innerHTML = playerName;
@@ -1457,7 +1462,8 @@ function endGame() {
     foxIdNumber = 0
     foxArr = []
     isFoxCreated = false;
-
+    foxShot = 0
+    duckStolen = 0
     duckOnMap = 0
     ducks_on_level = 20
     sendPartner = false
@@ -1847,6 +1853,7 @@ function prepareMenu() {
     }
     window.addEventListener("keydown", a, false)
 };
+
 var intro_menu_display = function (e) {
     if (e.code == "KeyQ" && document.getElementById("map") == null && document.getElementsByClassName("choose_map")[0] == null && document.getElementsByClassName("score_map")[0] == null && Number(document.body.childElementCount) == 1 && document.getElementById("intro-scene") != null && level == 0) {
         
@@ -1924,7 +1931,8 @@ var intro_menu_display = function (e) {
         }
         
     }
-}
+};
+
 function createMap() {
     if (level == 999) {
         document.body.innerHTML = mainMenu;
